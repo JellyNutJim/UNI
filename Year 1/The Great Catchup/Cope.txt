@@ -1,0 +1,38 @@
+Software engineering:
+Week 5:
+Week 6:
+Week 7:
+Week 8:
+
+Website:
+Week 5: 
+	Website Displaying - Done 
+	Ex1 - Done
+	UTF - Not Done
+Week 6:
+	HTML PDF - Done
+	Ex1 - Done
+Week 7:
+	CSS PDF1 - Done
+	CSS PDF2 - Done
+Week 8:
+	HTML Form PDF - Done
+	CGI PDF - Not Done
+
+Coursework 1: Not Done
+Coursework 2: Not Done
+
+Problem Solving:
+Week 5:
+	Easter Function - Done
+	Logic - Done
+
+Week 6: 
+	Set Theory pdf1 - Done
+	Set Theory pdf2 - Done
+	Set Theory pdf3 - Done
+	Set Theory hw - 
+
+Week 7:
+	Set Theory ex
+Week 8:
