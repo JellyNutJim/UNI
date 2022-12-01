@@ -1,0 +1,103 @@
+Question 1:
+
+a)
+
+P  Q  ¬Q  (P ^ ¬Q)
+1  1   0     0
+1  0   1     1
+0  1   0     0
+0  0   1     0
+
+b)
+
+P  Q  R  (Q => R)   (P V (Q => R)) 
+1  1  1      1            1
+1  1  0      0            0
+1  0  1      1            1
+1  0  0      1            1
+0  1  1      1            0
+0  1  0      0            0
+0  0  1      1            0
+0  0  0      1            0
+
+c)
+
+P  Q  R ¬Q   (¬Q => R)    P => (¬Q => R)
+1  1  1  0       1              1
+1  1  0  0       1              1
+1  0  1  1       1              1
+1  0  0  1       0              0    
+0  1  1  0       1              0
+0  1  0  0       1              0
+0  0  1  1       1              0 
+0  0  0  1       0              0
+
+d)
+
+P  Q  R  (Q <=> R)   P V (Q <=> R)
+1  1  1      1            1
+1  1  0      0            1
+1  0  1      0            1
+1  0  0      1            1
+0  1  1      1            1
+0  1  0      0            0
+0  0  1      0            0
+0  0  0      1            1
+
+Question 2:
+
+P = "I am hungry"
+Q = "My plate is empty"
+R = "The canteen is open"
+
+a) (P ^ Q)
+b) (R => ¬Q)
+c) R => ¬P
+d) (¬R V (R ^ Q)) => P
+
+Question 3:
+
+(P => R) == (¬R => ¬P)
+
+P  R  (P => R)  ¬R ¬P  (¬R => ¬P)
+1  1     1       0  0      1
+1  0     0       0  1      0
+0  1     1       1  0      1
+0  0     1       1  1      1
+
+Question 4:
+
+¬(P ^ Q) == (¬Q V ¬P)
+
+Apply de-morgans law
+
+¬(P ^ Q) = ¬P V ¬Q
+
+Apply commutative law
+
+¬P V ¬Q = ¬Q V ¬P
+
+Question 5:
+
+(p => R) != (r => P)
+
+p = 
+r = 
+
+(p => r) 
+(r => p) 
+
+¬(¬Q V P)
+
+1    1
+0    1
+1    0
+1    1
+
+Question 6:
+
+
+
+
+
+
