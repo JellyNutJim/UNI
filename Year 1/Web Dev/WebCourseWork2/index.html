@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <head>
+            <meta charset="utf-8">
+            <title>Easter</title>
+            <link rel="stylesheet" type="text/css" href="main.css">
+            <link rel="python" type="script/python" href="cgi-bin/easter.py">
+        </head>
+        
+        <main>
+            <form action="cgi-bin/easter.py" method="GET">
+
+                <!--Entrance point for the requested year-->
+                <div class="date_input">
+                    <label for="year">Please enter a year</label>
+                    <input type="number" name="year">
+                </div>
+
+                <!--User date format selection options-->
+                <div class="Options">
+                    <p>How would you like this to be formated:</p>
+                    <input type="radio" name="date_options" id="numerically" value="n">
+                    <label for="numerically">Numerically</label>
+                    <br>
+                    <input type="radio" name="date_options" id="verbosely" value="v"> 
+                    <label for="verbosely">Verbosely</label>
+                    <br>
+                    <input type="radio" name="date_options" id="both" value="b">
+                    <label for="both">Both</label>
+                </div>
+                
+                <div class="submission">
+                    <br>
+                    <input type="submit" value="submit"/>
+                </div>
+
+            </form>
+        </main>
+    </body>
+</html>
