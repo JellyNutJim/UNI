@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8" >
+	<title>Test CGI Python number squared</title>
+</head>
+<body>
+ <form action="cgi-bin/easter.py" method="GET">
+ <label for="theNumber">Enter a number to be  squared</label>
+ <input type="text" id="theNumber" 
+        name="theNumber" /> <br />
+	<!-- use type="number" to disallow non-numerical input and 
+	add the 'required' attribute to force the user to fill something in -->
+ <input type="submit" value="submit" />
+ </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Example Form</title>
+</head>
+
+<body>
+
+ <form action="cgi-bin/ExampleForm.py" method="POST">
+ <!-- we allow for file uploads below, so we have to use POST -->
+
+ <fieldset>                   <!--  fieldset element is not compulsory   -->
+   <legend>Your Name</legend> <!-- but useful for subdividing a big form -->
+
+   <label for="FirstName">given name:</label>
+   <input type="text" id="FirstName" name="FirstName"/> <br/>
+
+   <label for="Surname">surname:</label>
+   <input type="text" id="Surname" name="Surname" value="Caminada"/> <br/>
+ </fieldset>
+
+ <fieldset>
+   <legend>Something about Yourself</legend>
+
+   <label> <input type="radio" name="sex" value="male"> male </label> <br/>
+   <label> <input type="radio" name="sex" value="female"> female </label> <br/>
+
+   <label>About Yourself: <br>
+     <textarea name="About" rows="3" cols="40" placeholder="about myself"></textarea>
+   </label> <br/>
+
+   Music taste:
+   <select name="music"> <!-- try adding the attribute multiple -->
+     <optgroup label="eurodance">
+       <option value="aol">Army of Lovers</option>
+       <!-- WARNING: option tag needs a closing tag
+            validator.w3.org doesn't flag an error/warning if you omit it
+            but the values won't be passed on to the CGI python script -->
+       <option value="2unlimited" selected="selected">2 Unlimited</option>
+     </optgroup>
+     <optgroup label="britpop">
+       <option value="littlemix">Little Mix</option>
+       <option value="spicegirls">The SpiceGirls</option>
+     </optgroup>
+     <optgroup label="hip hop">
+       <option value="rundmc">Run DMC</option>
+       <option value="glc">Goldie Lookin Chain</option>
+     </optgroup>
+   </select>
+ </fieldset>
+
+ <fieldset>
+   <legend>Even More about Yourself</legend>
+   Favorite colour: <input type="color" name="FavColour" value="#000000"><br/>
+   Date of Birth: <input type="date" name="BirthDate"><br/>
+   <!-- date not yet implemented by all major browsers -->
+   Upload a Selfie: <input type="file" name="Selfie" accept="image/*"> <br/>
+   <!-- we want to have image files of any subtype (gif, jpg, ...) -->
+   Your WIFI password: <input type="password" name="WifiPasswd" required>
+ </fieldset>
+
+ <fieldset>
+   <legend>Are You Sure?</legend>
+   <input type="radio" name="sure" value="yes">Yes, I'm sure!  
+   <!-- use checkbox, not radio, when there is just one option  -->
+   <!-- try use checked attribute -->
+ </fieldset>
+
+ <input type="reset" value="clear">
+ <input type="submit" value="go for it">
+
+ <!-- clicking on "go for it" won't yet work, because we haven't yet uploaded 
+      any python code (ExampleForm.py) to the server. And even if we did, 
+      it still wouldn't work because we're currently referring to the script 
+      (which is on our local disk, and not on any webserver) using relative 
+      addressing ("cgi-bin/ExampleForm.py") so the browser wouldn't know where 
+      to go. -->
+
+ </form>
+
+
+</body></html>

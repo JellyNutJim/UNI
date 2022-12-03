@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>First Form</title>
+</head>
+
+<body>
+<p>Progress: <progress value="1" max="3"></progress></p>
+<form action="cgi-bin/SecondForm.py" method="POST">
+
+<fieldset>
+ <legend>Your Name</legend> 
+
+ <label for="fn">given name: </label>
+ <input type="text" id="fn" name="GivenName" tabindex="1" accesskey="g" required /> <br/>
+ <!-- the for attribute of the label element
+      refers to the id attribute of the input element -->
+ <!-- the name attribute of the input element
+      is what we will use in the Python CGI script -->
+
+ <label for="sn">surname: </label>
+ <input type="text" id="sn" name="Surname" tabindex="2" accesskey="s" required />
+ <!-- the required attribute in the input element means
+      that the user cannot leave the field empty -->
+
+</fieldset>
+
+<fieldset>
+ <legend>Personal Information</legend>
+
+   <label>
+	age: <input type="number" name="Age" min="0" max="100" tabindex="3" accesskey="a" required />
+   </label> <br/>
+   <!-- here we put the input element inside of a label element,
+	so no need to refer to any id -->
+
+   <label>
+	<input type="radio" name="Gender" value="male" tabindex="4" accesskey="m"> male
+   </label> <br/>
+   <label>
+	<input type="radio" name="Gender" value="female" tabindex="4" accesskey="f"> female
+   </label>
+
+ </fieldset>
+
+ <input type="reset" value="clear">
+ <input type="submit" value="submit">
+
+ </form>
+</body>
+</html>
