@@ -21,7 +21,8 @@ def Easter(y):
     r = (2 * e + 2 * j - k - h + m + 32) % 7
     n = (h - m + r + 90) // 25
     p = (h - m + r + n + 19) % 32
-    return datetime.date(day = p, month = n, year = y)
+
+    return datetime.date(day = p, month = n, year = 10)
     
 date = Easter(int(year))    
 
@@ -38,46 +39,31 @@ if (date.day not in [11, 12, 13]):
 
 # Get Correct Month
 month = date.month
-if (month == 1):
-    month = "January"
-elif (month == 2):
-    month = "Febuary"
-elif (month == 3):
+if (month == 3):
     month = "March"
 elif (month == 4):
     month = "April"
-elif (month == 5):
-    month = "May"
-elif (month == 6):
-    month = "June"
-elif (month == 7):
-    month = "July"
-elif (month == 8):
-    month = "August"
-elif (month == 9):
-    month = "September"
-elif (month == 10):
-    month = "October"
-elif (month == 11):
-    month = "November"
-elif (month == 12):
-    month = "December"
-
 
 print('Content-Type: text/html; charset=utf-8')
 print('')
 print('<!DOCTYPE html>')
 print('<html>')
-print('<head> <title> Date of easter in year %s </title>  </head>' % (year))
+print('<head> <title> Date of easter in year %s </title>  <link rel="stylesheet" type="text/css" href="../style.css"> </head>' % (year))
 print('<body>')
-print('<p>')
+print('<main>')
+print('<p class = "day_of_easter">')
 if (display_option == "n"):
-    print('Easter falls on: %d/%d/%d' % (date.day, date.month, date.year))
+    print('Easter falls on:<br>%d/%d/%s' % (date.day, date.month, year))
 elif(display_option == "v"):
-    print('Easter falls on: Sunday The %d<sup>%s</sup> of %s %d' % ( date.day, super_script, month, date.year))
+    print('Easter falls on:<br>Sunday The %d<sup>%s</sup> of %s %s' % ( date.day, super_script, month, year))
 elif(display_option == "b"):
-    print('Easter falls on: %d/%d/%d' % (date.day, date.month, date.year))
-    print('<br>Easter falls on: Sunday The %d<sup>%s</sup> of %s %d' % (date.day, super_script, month, date.year))
+    print('Easter falls on:<br>%d/%d/%s' % (date.day, date.month, year))
+    print('<br>Sunday the %d<sup>%s</sup> of %s %s' % (date.day, super_script, month, year))
 print('</p>')
+print('<br>')
+print('<form action="../index.html">')
+print('<input type="submit" value="Back" id="btn">')
+print('</form>')
+print('</main>')
 print('</body>')
 print('</html>')
