@@ -1,0 +1,25 @@
+main{
+    position: relative;
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    padding: 10px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: black;
+    border-radius: 15px;
+    background-color: lightgray;
+}
+
+.day_of_easter{
+    text-align: center;
+}
+
+#btn {
+    position: relative;
+    margin-left: 40%;
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
